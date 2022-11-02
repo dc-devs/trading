@@ -7,7 +7,7 @@ const setHighPrice = ({ priceBn, candlestick }: ISetPriceOptions) => {
 	if (isHighestPrice) {
 		setValueBn({
 			priceBn,
-			property: candlestick.high,
+			valueBnObject: candlestick.high,
 		});
 	}
 };

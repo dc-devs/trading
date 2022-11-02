@@ -4,7 +4,7 @@ import { ISetPriceOptions } from '../interfaces';
 const setClosePrice = ({ priceBn, candlestick }: ISetPriceOptions) => {
 	setValueBn({
 		priceBn,
-		property: candlestick.close,
+		valueBnObject: candlestick.close,
 	});
 };
 

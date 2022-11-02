@@ -1,25 +1,25 @@
 import BigNumber from 'bignumber.js';
-import { ICandlestick } from '../../../interfaces';
+import { IFootprint } from '../../../interfaces';
 
-const getDefaultCandleStick = (): ICandlestick => {
+const generateDefaultFootprint = (): IFootprint => {
 	return {
-		open: {
+		sellVolume: {
 			value: '0',
 			bn: new BigNumber(0),
 		},
-		close: {
+		buyVolume: {
 			value: '0',
 			bn: new BigNumber(0),
 		},
-		high: {
+		totalVolume: {
 			value: '0',
 			bn: new BigNumber(0),
 		},
-		low: {
+		deltaVolume: {
 			value: '0',
 			bn: new BigNumber(0),
 		},
 	};
 };
 
-export default getDefaultCandleStick;
+export default generateDefaultFootprint;

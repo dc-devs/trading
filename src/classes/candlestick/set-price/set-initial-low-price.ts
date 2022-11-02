@@ -7,7 +7,7 @@ const setInitialLowPrice = ({ priceBn, candlestick }: ISetPriceOptions) => {
 	if (!hasLowestPriceBeenSet) {
 		setValueBn({
 			priceBn,
-			property: candlestick.low,
+			valueBnObject: candlestick.low,
 		});
 	}
 };
