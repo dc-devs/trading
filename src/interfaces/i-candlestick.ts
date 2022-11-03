@@ -1,10 +1,10 @@
-import IValueBn from './i-value-bn';
+import { TickValue } from '../classes';
 
 interface ICandlestick {
-	open: IValueBn;
-	close: IValueBn;
-	high: IValueBn;
-	low: IValueBn;
+	open: TickValue;
+	close: TickValue;
+	high: TickValue;
+	low: TickValue;
 }
 
 export default ICandlestick;

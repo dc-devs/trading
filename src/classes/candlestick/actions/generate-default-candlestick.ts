@@ -1,24 +1,15 @@
 import BigNumber from 'bignumber.js';
+import TickValue from '../../tick-value';
 import { ICandlestick } from '../../../interfaces';
 
 const getDefaultCandleStick = (): ICandlestick => {
+	const priceBn = BigNumber(0);
+
 	return {
-		open: {
-			value: '0',
-			bn: new BigNumber(0),
-		},
-		close: {
-			value: '0',
-			bn: new BigNumber(0),
-		},
-		high: {
-			value: '0',
-			bn: new BigNumber(0),
-		},
-		low: {
-			value: '0',
-			bn: new BigNumber(0),
-		},
+		open: new TickValue({ priceBn }),
+		close: new TickValue({ priceBn }),
+		high: new TickValue({ priceBn }),
+		low: new TickValue({ priceBn }),
 	};
 };
 

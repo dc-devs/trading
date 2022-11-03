@@ -4,7 +4,7 @@ import { generateDefaultFootprint } from './actions';
 interface IUpdateOptions {
 	price: string;
 	size: string;
-	timestamp: string;
+	tickIndentifier: string;
 }
 
 class FootPrint {
@@ -14,9 +14,9 @@ class FootPrint {
 		this.values = generateDefaultFootprint();
 	}
 
-	update({ price, size, timestamp }: IUpdateOptions) {
-		console.log({ price, size, timestamp });
-		// update({ price, FootPrint: this.values });
+	update({ price, size, tickIndentifier }: IUpdateOptions) {
+		console.log({ price, size, tickIndentifier, footprint: this.values });
+		// update({ price, footprint: this.values });
 	}
 }
 

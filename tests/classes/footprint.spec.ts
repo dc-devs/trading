@@ -1,6 +1,11 @@
 import Footprint from '../../src/classes/footprint';
 import { generateDefaultFootprint } from '../../src/classes/footprint/actions';
 
+/// Create TickValue
+// which as a update function,
+// and exposes bn and value
+// candlestick.close.update({ priceBn });
+
 describe('Footprint', () => {
 	let footprint: Footprint;
 	const defaultFootprint = generateDefaultFootprint();
@@ -31,9 +36,19 @@ describe('Footprint', () => {
 		});
 	});
 
-	describe('update', () => {
-		it('should be a function', () => {
-			expect(typeof footprint.update).toBe('function');
-		});
-	});
+	// describe('update', () => {
+	// 	it('should be a function', () => {
+	// 		expect(typeof footprint.update).toBe('function');
+	// 	});
+
+	// 	describe('when called', () => {
+	// 		it('should be a function', () => {
+	// 			// This gets decided on by the Tick Class
+	// 			const tickIndentifier = getFormattedTime({ timestamp });
+	// 			footprint.update({{ price, size, tickIndentifier }})
+
+	// 			expect(footprint.values).toBe({});
+	// 		});
+	// 	});
+	// });
 });
