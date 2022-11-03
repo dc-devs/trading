@@ -6,8 +6,8 @@ describe('TickValue', () => {
 	let tickValue: TickValue;
 
 	beforeEach(() => {
-		priceBn = BigNumber(100.15);
-		tickValue = new TickValue({ priceBn });
+		priceBn = BigNumber(100);
+		tickValue = new TickValue({ value: priceBn });
 	});
 
 	it('should be a class', () => {
@@ -21,18 +21,58 @@ describe('TickValue', () => {
 		});
 	});
 
-	describe('update', () => {
+	describe('set', () => {
 		it('should be a function', () => {
-			expect(typeof tickValue.update).toBe('function');
+			expect(typeof tickValue.set).toBe('function');
 		});
 
 		describe('when called', () => {
-			it('should should update the tick value', () => {
+			it('should should set the tick value', () => {
 				const priceBn = new BigNumber(1000.55);
-				tickValue.update({ priceBn });
+				tickValue.set({ value: priceBn });
 
 				expect(tickValue.bn).toEqual(priceBn);
 				expect(tickValue.value).toEqual(priceBn.toString());
+			});
+		});
+	});
+
+	describe('add', () => {
+		it('should be a function', () => {
+			expect(typeof tickValue.add).toBe('function');
+		});
+
+		describe('when called', () => {
+			it('should should add the value', () => {
+				const priceBn = new BigNumber(1000);
+				const priceBnToAdd = new BigNumber(1000);
+				const expectedPriceBn = priceBn.plus(priceBnToAdd);
+
+				tickValue.set({ value: priceBn });
+				tickValue.add({ value: priceBnToAdd });
+
+				expect(tickValue.bn).toEqual(expectedPriceBn);
+				expect(tickValue.value).toEqual(expectedPriceBn.toString());
+			});
+		});
+	});
+
+	describe('subtract', () => {
+		it('should be a function', () => {
+			expect(typeof tickValue.subtract).toBe('function');
+		});
+
+		describe('when called', () => {
+			it('should should subtract the value', () => {
+				const priceBn = new BigNumber(1000);
+				const priceBnToSubtract = new BigNumber(500);
+				const expectedPriceBn = priceBn.minus(priceBnToSubtract);
+
+				tickValue.set({ value: priceBn });
+				tickValue.subtract({ value: priceBnToSubtract });
+
+				expect(tickValue.bn).toEqual(expectedPriceBn);
+				expect(tickValue.value).toEqual(expectedPriceBn.toString());
 			});
 		});
 	});

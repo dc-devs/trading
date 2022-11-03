@@ -1,24 +1,15 @@
 import BigNumber from 'bignumber.js';
+import TickValue from '../../tick-value';
 import { IFootprint } from '../../../interfaces';
 
 const generateDefaultFootprint = (): IFootprint => {
+	const sizeBn = new BigNumber(0);
+
 	return {
-		sellVolume: {
-			value: '0',
-			bn: new BigNumber(0),
-		},
-		buyVolume: {
-			value: '0',
-			bn: new BigNumber(0),
-		},
-		totalVolume: {
-			value: '0',
-			bn: new BigNumber(0),
-		},
-		deltaVolume: {
-			value: '0',
-			bn: new BigNumber(0),
-		},
+		sellVolume: new TickValue({ value: sizeBn }),
+		buyVolume: new TickValue({ value: sizeBn }),
+		totalVolume: new TickValue({ value: sizeBn }),
+		deltaVolume: new TickValue({ value: sizeBn }),
 	};
 };
 

@@ -1,10 +1,11 @@
+import { Side } from './enums';
+import { update } from './actions';
 import { IFootprint } from '../../interfaces';
 import { generateDefaultFootprint } from './actions';
 
 interface IUpdateOptions {
-	price: string;
 	size: string;
-	tickIndentifier: string;
+	side: Side;
 }
 
 class FootPrint {
@@ -14,9 +15,8 @@ class FootPrint {
 		this.values = generateDefaultFootprint();
 	}
 
-	update({ price, size, tickIndentifier }: IUpdateOptions) {
-		console.log({ price, size, tickIndentifier, footprint: this.values });
-		// update({ price, footprint: this.values });
+	update({ size, side }: IUpdateOptions) {
+		update({ size, side, footprint: this.values });
 	}
 }
 

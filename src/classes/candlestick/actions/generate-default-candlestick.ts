@@ -6,10 +6,10 @@ const getDefaultCandleStick = (): ICandlestick => {
 	const priceBn = BigNumber(0);
 
 	return {
-		open: new TickValue({ priceBn }),
-		close: new TickValue({ priceBn }),
-		high: new TickValue({ priceBn }),
-		low: new TickValue({ priceBn }),
+		open: new TickValue({ value: priceBn }),
+		close: new TickValue({ value: priceBn }),
+		high: new TickValue({ value: priceBn }),
+		low: new TickValue({ value: priceBn }),
 	};
 };
 

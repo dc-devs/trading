@@ -1,3 +1,4 @@
+import { Side } from '../../src/classes/footprint/enums';
 import Footprint from '../../src/classes/footprint';
 import { generateDefaultFootprint } from '../../src/classes/footprint/actions';
 
@@ -36,19 +37,22 @@ describe('Footprint', () => {
 		});
 	});
 
-	// describe('update', () => {
-	// 	it('should be a function', () => {
-	// 		expect(typeof footprint.update).toBe('function');
-	// 	});
+	describe('update', () => {
+		it('should be a function', () => {
+			expect(typeof footprint.update).toBe('function');
+		});
 
-	// 	describe('when called', () => {
-	// 		it('should be a function', () => {
-	// 			// This gets decided on by the Tick Class
-	// 			const tickIndentifier = getFormattedTime({ timestamp });
-	// 			footprint.update({{ price, size, tickIndentifier }})
+		describe('when called', () => {
+			it('should update the footprint with the expected values', () => {
+				const size = '100';
+				const side = Side.Buy;
 
-	// 			expect(footprint.values).toBe({});
-	// 		});
-	// 	});
-	// });
+				footprint.update({ size, side });
+
+				console.log(footprint.values);
+
+				expect(true).toBe(true);
+			});
+		});
+	});
 });

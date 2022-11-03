@@ -1,21 +1,31 @@
 import BigNumber from 'bignumber.js';
 
 interface ITickValueOptions {
-	priceBn: BigNumber;
+	value: BigNumber;
 }
 
 class TickValue {
 	value: string;
 	bn: BigNumber;
 
-	constructor({ priceBn }: ITickValueOptions) {
-		this.bn = priceBn;
-		this.value = priceBn.toString();
+	constructor({ value }: ITickValueOptions) {
+		this.bn = value;
+		this.value = value.toString();
 	}
 
-	update({ priceBn }: ITickValueOptions) {
-		this.bn = priceBn;
-		this.value = priceBn.toString();
+	set({ value }: ITickValueOptions) {
+		this.bn = value;
+		this.value = value.toString();
+	}
+	
+	add({ value }: ITickValueOptions) {
+		this.bn = this.bn.plus(value);
+		this.value = this.bn.toString();
+	}
+	
+	subtract({ value }: ITickValueOptions) {
+		this.bn = this.bn.minus(value);
+		this.value = this.bn.toString();
 	}
 }
 

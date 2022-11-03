@@ -4,7 +4,7 @@ const setOpenPrice = ({ priceBn, candlestick }: ISetPriceOptions) => {
 	const isFirstPrice = candlestick.open.value === '0';
 
 	if (isFirstPrice) {
-		candlestick.open.update({ priceBn });
+		candlestick.open.set({ value: priceBn });
 	}
 };
 

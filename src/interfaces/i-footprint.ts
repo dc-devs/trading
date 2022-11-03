@@ -1,11 +1,10 @@
-import IValueBn from './i-value-bn';
+import { TickValue } from '../classes';
 
 interface IFootprint {
-	sellVolume: IValueBn;
-	buyVolume: IValueBn;
-	totalVolume: IValueBn;
-	deltaVolume: IValueBn;
-	[key: string]: IFootprint | IValueBn;
+	sellVolume: TickValue;
+	buyVolume: TickValue;
+	totalVolume: TickValue;
+	deltaVolume: TickValue;
 }
 
 export default IFootprint;
