@@ -43,15 +43,37 @@ describe('Footprint', () => {
 		});
 
 		describe('when called', () => {
-			it('should update the footprint with the expected values', () => {
-				const size = '100';
-				const side = Side.Buy;
+			describe("and the side is 'buy'", () => {
+				it('should update the footprint with the expected values', () => {
+					const size = '100';
+					const side = Side.Buy;
 
-				footprint.update({ size, side });
+					footprint.update({ size, side });
 
-				console.log(footprint.values);
+					const { buyVolume, sellVolume, totalVolume, deltaVolume } =
+						footprint.values;
 
-				expect(true).toBe(true);
+					expect(buyVolume.value).toBe(size);
+					expect(sellVolume.value).toBe('0');
+					expect(totalVolume.value).toBe(size);
+					expect(deltaVolume.value).toBe(size);
+				});
+			});
+			describe("and the side is 'sell'", () => {
+				it('should update the footprint with the expected values', () => {
+					const size = '100';
+					const side = Side.Sell;
+
+					footprint.update({ size, side });
+
+					const { buyVolume, sellVolume, totalVolume, deltaVolume } =
+						footprint.values;
+
+					expect(buyVolume.value).toBe('0');
+					expect(sellVolume.value).toBe(size);
+					expect(totalVolume.value).toBe(size);
+					expect(deltaVolume.value).toBe(`-${size}`);
+				});
 			});
 		});
 	});
