@@ -1,14 +1,17 @@
 import Tick from '../../src/classes/tick';
+import { IFootprint, ICandlestick } from '../../src/interfaces';
 import { generateDefaultFootprint } from '../../src/classes/footprint/actions';
 import { generateDefaultCandlestick } from '../../src/classes/candlestick/actions';
 
 describe('Tick', () => {
 	let tick: Tick;
-	const defaultFootprint = generateDefaultFootprint();
-	const defaultCandlestick = generateDefaultCandlestick();
-
+	let defaultFootprint: IFootprint;
+	let defaultCandlestick: ICandlestick;
+	
 	beforeEach(() => {
 		tick = new Tick();
+		defaultFootprint = generateDefaultFootprint();
+		defaultCandlestick = generateDefaultCandlestick();
 	});
 
 	it('should be a class', () => {
