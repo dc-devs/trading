@@ -12,10 +12,7 @@ const update = ({ size, side, footprint }: IOptions) => {
 	const sizeBn = new BigNumber(size);
 
 	if (side === Side.Buy) {
-		console.log('Add buyVolume', sizeBn);
 		footprint.buyVolume.add({ value: sizeBn });
-		console.log('Add Buy', sizeBn);
-		console.log('buyVolume', footprint.buyVolume.value);
 	}
 
 	if (side === Side.Sell) {
