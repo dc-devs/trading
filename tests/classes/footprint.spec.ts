@@ -1,4 +1,4 @@
-import { Side } from '../../src/classes/footprint/enums';
+import { Side } from '../../src/enums';
 import Footprint from '../../src/classes/footprint';
 import { generateDefaultFootprint } from '../../src/classes/footprint/actions';
 

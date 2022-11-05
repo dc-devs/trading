@@ -27,7 +27,7 @@ describe('TickValue', () => {
 		});
 
 		describe('when called', () => {
-			it('should should set the tick value', () => {
+			it('should set the tick value', () => {
 				const priceBn = new BigNumber(1000.55);
 				tickValue.set({ value: priceBn });
 
@@ -43,7 +43,7 @@ describe('TickValue', () => {
 		});
 
 		describe('when called', () => {
-			it('should should add the value', () => {
+			it('should add the value', () => {
 				const priceBn = new BigNumber(1000);
 				const priceBnToAdd = new BigNumber(1000);
 				const expectedPriceBn = priceBn.plus(priceBnToAdd);
@@ -63,7 +63,7 @@ describe('TickValue', () => {
 		});
 
 		describe('when called', () => {
-			it('should should subtract the value', () => {
+			it('should subtract the value', () => {
 				const priceBn = new BigNumber(1000);
 				const priceBnToSubtract = new BigNumber(500);
 				const expectedPriceBn = priceBn.minus(priceBnToSubtract);

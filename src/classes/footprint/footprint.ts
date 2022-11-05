@@ -1,4 +1,4 @@
-import { Side } from './enums';
+import { Side } from '../../enums';
 import { update } from './actions';
 import { IFootprint } from '../../interfaces';
 import { generateDefaultFootprint } from './actions';

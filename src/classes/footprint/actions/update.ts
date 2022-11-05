@@ -1,4 +1,4 @@
-import { Side } from '../enums';
+import { Side } from '../../../enums';
 import BigNumber from 'bignumber.js';
 import { IFootprint } from '../../../interfaces';
 
