@@ -1,12 +1,12 @@
-import { Side } from '../../src/enums';
-import { IFootprint } from '../../src/interfaces';
-import Footprint from '../../src/classes/footprint';
-import { generateDefaultFootprint } from '../../src/classes/footprint/actions';
+import { Side } from '../../../src/enums';
+import { IFootprint } from '../../../src/interfaces';
+import Footprint from '../../../src/classes/footprint';
+import { generateDefaultFootprint } from '../../../src/classes/footprint/actions';
 
 describe('Footprint', () => {
 	let footprint: Footprint;
 	let defaultFootprint: IFootprint;
-	
+
 	beforeEach(() => {
 		footprint = new Footprint();
 		defaultFootprint = generateDefaultFootprint();

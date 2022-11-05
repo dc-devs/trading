@@ -1,4 +1,4 @@
-import { update } from './api';
+// import { update } from './api';
 import { Side } from '../../enums';
 import Footprint from '../footprint';
 import Candlestick from '../candlestick';
@@ -19,7 +19,8 @@ class Tick {
 	}
 
 	update({ price, size, side }: IUpdateOptions) {
-		update({ price, size, side, tick: this });
+		this.candlestick.update({ price });
+		this.foootprint.update({ size, side });
 	}
 }
 

@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import TickValue from '../../src/classes/tick-value';
+import TickValue from '../../../src/classes/tick-value';
 
 describe('TickValue', () => {
 	let priceBn: BigNumber;

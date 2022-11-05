@@ -1,11 +1,11 @@
-import Candlestick from '../../src/classes/candlestick';
-import { ICandlestick } from '../../src/interfaces';
-import { generateDefaultCandlestick } from '../../src/classes/candlestick/actions';
+import Candlestick from '../../../src/classes/candlestick';
+import { ICandlestick } from '../../../src/interfaces';
+import { generateDefaultCandlestick } from '../../../src/classes/candlestick/actions';
 
 describe('Candlestick', () => {
 	let candlestick: Candlestick;
 	let defaultCandlestick: ICandlestick;
-	
+
 	beforeEach(() => {
 		candlestick = new Candlestick();
 		defaultCandlestick = generateDefaultCandlestick();

@@ -1,4 +1,4 @@
-import getFormattedTime from '../../src/utils/get-formatted-time';
+import getFormattedTime from '../../../src/utils/get-formatted-time';
 
 describe('getFormattedTime', () => {
 	it('should be a function', () => {

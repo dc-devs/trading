@@ -1,4 +1,4 @@
-import convertNanoToMs from '../../src/utils/convert-nano-to-ms';
+import convertNanoToMs from '../../../src/utils/convert-nano-to-ms';
 
 describe('convertNanoToMs', () => {
 	it('should be a function', () => {
