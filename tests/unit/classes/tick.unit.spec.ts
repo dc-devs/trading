@@ -2,7 +2,7 @@ import { jest } from '@jest/globals';
 import { Side } from '../../../src/enums';
 import Tick from '../../../src/classes/tick';
 
-jest.mock('../../src/classes/footprint', () => {
+jest.mock('../../../src/classes/footprint', () => {
 	return jest.fn().mockImplementation(() => {
 		return {
 			values: jest.fn(),
@@ -11,7 +11,7 @@ jest.mock('../../src/classes/footprint', () => {
 	});
 });
 
-jest.mock('../../src/classes/candlestick', () => {
+jest.mock('../../../src/classes/candlestick', () => {
 	return jest.fn().mockImplementation(() => {
 		return {
 			values: jest.fn(),
