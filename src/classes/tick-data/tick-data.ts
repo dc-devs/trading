@@ -1,14 +1,30 @@
-// TickData consumes a match execution data obj,
-// decides which tick this data belongs to
-// and either creates a new tick, or updates current accoordingly
-// Assuming 1 min ticks for now, how we'll be aggregating this data...
-// this is the part where we're not sure how we'll aggregate / store
-// said collected data,
+import { update } from './api';
+import { ITick, ITickData } from '../../interfaces';
+
+interface IUpdateOptions {
+	price: string;
+	size: string;
+	side: string;
+	tickIndetifier: string;
+}
+
 class TickData {
-	values: {};
+	tickData: ITickData;
+	ticks: ITick[];
 
 	constructor() {
-		this.values = {};
+		this.ticks = [];
+		this.tickData = {};
+	}
+
+	update({ price, size, side, tickIndetifier }: IUpdateOptions) {
+		update({
+			price,
+			size,
+			side,
+			tickIndetifier,
+			tickData: this.tickData,
+		});
 	}
 }
 
