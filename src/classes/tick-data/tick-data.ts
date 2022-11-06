@@ -1,6 +1,6 @@
 import { update } from './api';
 import { Side } from '../../enums';
-import { ITick, ITickData } from '../../interfaces';
+import { ITickData } from '../../interfaces';
 
 interface IUpdateOptions {
 	price: string;
@@ -10,12 +10,10 @@ interface IUpdateOptions {
 }
 
 class TickData {
-	tickData: ITickData;
-	ticks: ITick[];
+	ticks: ITickData;
 
 	constructor() {
-		this.ticks = [];
-		this.tickData = {};
+		this.ticks = {};
 	}
 
 	update({ price, size, side, tickIndetifier }: IUpdateOptions) {
@@ -24,7 +22,7 @@ class TickData {
 			size,
 			side,
 			tickIndetifier,
-			tickData: this.tickData,
+			ticks: this.ticks,
 		});
 	}
 }

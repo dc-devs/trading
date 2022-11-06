@@ -6,30 +6,26 @@ interface IUpdateOptions {
 	price: string;
 	size: string;
 	side: Side;
-	tickData: ITickData;
+	ticks: ITickData;
 	tickIndetifier: string;
 }
 
 const update = ({
-	tickData,
-	price,
-	size,
 	side,
+	size,
+	ticks,
+	price,
 	tickIndetifier,
 }: IUpdateOptions) => {
-	let currentTick = tickData[tickIndetifier];
-
-	if (!currentTick) {
-		currentTick = new Tick();
+	if (!ticks[tickIndetifier]) {
+		ticks[tickIndetifier] = new Tick();
 	}
 
-	currentTick.update({
+	ticks[tickIndetifier].update({
 		price,
 		size,
 		side,
 	});
-
-	console.log({ tickData, price, size, side, tickIndetifier });
 };
 
 export default update;
