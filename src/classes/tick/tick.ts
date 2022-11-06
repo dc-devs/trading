@@ -10,17 +10,17 @@ interface IUpdateOptions {
 }
 
 class Tick {
-	foootprint: Footprint;
+	footprint: Footprint;
 	candlestick: Candlestick;
 
 	constructor() {
-		this.foootprint = new Footprint();
+		this.footprint = new Footprint();
 		this.candlestick = new Candlestick();
 	}
 
 	update({ price, size, side }: IUpdateOptions) {
 		this.candlestick.update({ price });
-		this.foootprint.update({ size, side });
+		this.footprint.update({ size, side });
 	}
 }
 

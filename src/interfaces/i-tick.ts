@@ -1,7 +1,7 @@
 import { Footprint, Candlestick } from '../classes';
 
 interface ITick {
-	foootprint: Footprint;
+	footprint: Footprint;
 	candlestick: Candlestick;
 }
 

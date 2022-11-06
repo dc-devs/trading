@@ -33,7 +33,7 @@ describe('Tick', () => {
 
 	describe('when instantiated', () => {
 		it('should have expected default values', () => {
-			expect(tick.foootprint).toBeDefined();
+			expect(tick.footprint).toBeDefined();
 			expect(tick.candlestick).toBeDefined();
 		});
 	});
@@ -57,7 +57,7 @@ describe('Tick', () => {
 					expect(tick.candlestick.update).toHaveBeenCalledWith({
 						price,
 					});
-					expect(tick.foootprint.update).toHaveBeenCalledWith({
+					expect(tick.footprint.update).toHaveBeenCalledWith({
 						size,
 						side,
 					});
@@ -77,7 +77,7 @@ describe('Tick', () => {
 					expect(tick.candlestick.update).toHaveBeenCalledWith({
 						price,
 					});
-					expect(tick.foootprint.update).toHaveBeenCalledWith({
+					expect(tick.footprint.update).toHaveBeenCalledWith({
 						size,
 						side,
 					});
