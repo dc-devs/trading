@@ -1,7 +1,7 @@
-import { ITick } from '.';
+import Tick from '../classes/tick';
 
 interface ITickData {
-	[key: string]: ITick;
+	[key: string]: Tick;
 }
 
 export default ITickData;

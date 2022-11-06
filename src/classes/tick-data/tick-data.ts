@@ -1,10 +1,11 @@
 import { update } from './api';
+import { Side } from '../../enums';
 import { ITick, ITickData } from '../../interfaces';
 
 interface IUpdateOptions {
 	price: string;
 	size: string;
-	side: string;
+	side: Side;
 	tickIndetifier: string;
 }
 
