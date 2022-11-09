@@ -31,7 +31,7 @@ describe('Tick', () => {
 			expect(typeof tick.update).toBe('function');
 		});
 
-		describe('when calledwhen called with a set of tick data', () => {
+		describe('when called with a set of tick data', () => {
 			beforeEach(() => {
 				const buys = [
 					{
