@@ -1,7 +1,7 @@
-import Tick from './tick';
-import TickData from './tick-data';
-import Footprint from './footprint';
-import TickValue from './tick-value';
-import Candlestick from './candlestick';
+import Tick from './charting/tick';
+import TickData from './charting/tick-data';
+import Footprint from './charting/footprint';
+import TickValue from './charting/tick-value';
+import Candlestick from './charting/candlestick';
 
 export { Tick, TickData, Footprint, TickValue, Candlestick };

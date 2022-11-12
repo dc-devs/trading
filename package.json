@@ -6,7 +6,8 @@
 	"private": true,
 	"license": "UNLICENSED",
 	"scripts": {
-		"test": "jest"
+		"test": "jest",
+		"start": "ts-node ./src/trade.ts"
 	},
 	"dependencies": {
 		"axios": "^0.27.2",
@@ -16,15 +17,18 @@
 		"dotenv": "^16.0.0",
 		"numeral": "^2.0.6",
 		"rimraf": "^3.0.2",
+		"tslib": "^2.4.1",
 		"uuid": "^9.0.0",
-		"ws": "^8.10.0"
+		"ws": "^8.11.0"
 	},
 	"devDependencies": {
-		"@types/numeral": "^2.0.2",
 		"@jest/test-sequencer": "^28.1.1",
 		"@jest/types": "^29.0.2",
 		"@types/jest": "^29.0.0",
-		"@types/node": "^17.0.31",
+		"@types/node": "^18.11.9",
+		"@types/numeral": "^2.0.2",
+		"@types/uuid": "^8.3.4",
+		"@types/ws": "^8.5.3",
 		"@typescript-eslint/eslint-plugin": "^5.22.0",
 		"@typescript-eslint/parser": "^5.22.0",
 		"eslint": "^8.15.0",
@@ -34,7 +38,7 @@
 		"prettier": "^2.6.2",
 		"ts-jest": "^28.0.8",
 		"ts-loader": "^9.3.0",
-		"ts-node": "^10.7.0",
+		"ts-node": "^10.9.1",
 		"tsconfig-paths": "^4.0.0",
 		"typescript": "^4.6.4"
 	},
